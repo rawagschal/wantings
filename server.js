@@ -3,10 +3,10 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const sendMail = require('./mail');
+const mailGun = require('./sendEmail/mailGun');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 const sequelize = require("./config/connection");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -29,22 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(require('./controllers/'));
 
-app.post('/email', (req, res) => {
-    const { email, subject, text } = req.body;
-    console.log('Data: ', req.body);
 
-    sendMail(email, subject, text, function(err, data) {
-        if (err) {
-            res.status(500).json({ message: "Internal Error "});
-        } else {
-            res.json({ message: 'Email Sent!' });
-        }
-    });
-});
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
-});
 
 
 sequelize.sync({ force: false }).then(() => {
