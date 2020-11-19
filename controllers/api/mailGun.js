@@ -5,6 +5,9 @@ const exphbs = require('express-handlebars');
 const sendMail = require('./mail');
 const router = require('express').Router();
 
+router.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
 
 router.post('/email', (req, res) => {
     const { email, subject, text } = req.body;
@@ -19,8 +22,5 @@ router.post('/email', (req, res) => {
     });
 });
 
-router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
-});
 
 module.export = router;
