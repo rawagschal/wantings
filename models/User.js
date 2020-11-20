@@ -43,12 +43,12 @@ const User = sequelize.define('user', {
     allowNull:false,
     unique:true,
     validate:{
-      isEmail:true,
+    isEmail:true,
     }
   },
 
 })
-
+User.sync();
 
 // Export the book model for other files to use
 module.exports = User;
