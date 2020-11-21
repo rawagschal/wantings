@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const mailGun = require('./mailGun');
 
-router.use('/', mailGun);
+router.get('/', (req, res) => {
+  res.render('email');
+});
 
 module.exports = router;
