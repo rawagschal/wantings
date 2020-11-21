@@ -26,13 +26,13 @@ router.post('/', (req, res) => {
     dimensions: req.body.dimensions,
     photoUrl: req.body.photoUrl,
   })
-    .then(dbPostData => res.json(dbPostData))
+  .then(dbItemData =>
+    res.json(dbItemData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
-});  
-
+  });
 router.put('/', (req, res) => {
   Item.update({
     id: req.body.id,
@@ -43,7 +43,7 @@ router.put('/', (req, res) => {
     dimensions: req.body.dimensions,
     photoUrl: req.body.photoUrl,
   })
-    .then(dbPostData => res.json(dbPostData))
+    .then(dbItemData => res.json(dbItemData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
@@ -59,7 +59,7 @@ router.delete('/', (req, res) => {
     dimensions: req.body.dimensions,
     photoUrl: req.body.photoUrl,
   })
-    .then(dbPostData => res.json(dbPostData))
+    .then(dbItemData => res.json(dbItemData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
