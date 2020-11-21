@@ -24,7 +24,7 @@ $('form').on('submit', (e) => {
         const password = document.querySelector('#password').value.trim();
       
         if (username && email && password) {
-          await fetch('/api/email', {
+          await fetch('/api/user/email', {
             method: 'post',
             body: JSON.stringify({
               email,

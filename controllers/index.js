@@ -1,9 +1,13 @@
 const router = require('express').Router();
 const apiRoutes = require('./api');
-const emailRoute = require('./email-route');
+// const emailRoute = require('./email-route');
+const loginRoute = require('./login-route');
+
 
 router.use('/api', apiRoutes);
-router.use('/email', emailRoute);
+// router.use('/email', emailRoute);
+router.use('/login', loginRoute);
+
 
 
 router.use((req, res) => {
