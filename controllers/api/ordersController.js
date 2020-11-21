@@ -1,5 +1,5 @@
 const { create } = require("express-handlebars");
-const Order = require("../models/Order");
+const Order = require("../../models/Order");
 
 // create
 // read Order

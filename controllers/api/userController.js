@@ -3,7 +3,7 @@
 // profile page
 // see orders
 
-const {User} = require('../models')
+const {User} = require('../../models')
 
  function getLogInPage(req, res, next) {
   res.render('login', {
