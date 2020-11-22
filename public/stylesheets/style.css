@@ -16,6 +16,15 @@ body {
   font-size: 14px;
 }
 
+header {
+  background-color: var(--olive);
+}
+
+.navbar-light .navbar-brand .nav-link{
+  color: white;
+  text-decoration: none;
+}
+
 main {
   background-color: var(--peach);
   display: flex;
@@ -36,7 +45,7 @@ main {
   color: white;
 }
 
-.gallery{
+.gallery{ 
   flex-direction: row ;
 }
 
