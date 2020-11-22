@@ -22,7 +22,7 @@ async function loginFormHandler(event) {
     }
   }
 
-  async function signupFormHandler(event) {
+  function signupFormHandler(event) {
     event.preventDefault();
   
     const username = document.querySelector('#username').value.trim();
@@ -31,8 +31,8 @@ async function loginFormHandler(event) {
     
 
     if (username && email && password) {
-     const response = await fetch('/api/user', {
-        method: 'post',
+        fetch('/api/user', {
+            method: 'post',
         body: JSON.stringify({
             username,
             email,
@@ -41,12 +41,23 @@ async function loginFormHandler(event) {
             text: "Hi " + username + " thank you for creating a profile"
         }),
         headers: { 'Content-Type': 'application/json' }
-      });
-      if (response.ok) {
-        console.log('Success');
-      } else {
-          alert(response.statusText);
-      }
+        })
+    //  const response = await fetch('/api/user/signup', {
+    //     method: 'post',
+    //     body: JSON.stringify({
+    //         username,
+    //         email,
+    //         password,
+    //         subject: "Welcome to Wantings",
+    //         text: "Hi " + username + " thank you for creating a profile"
+    //     }),
+    //     headers: { 'Content-Type': 'application/json' }
+      // });
+    //   if (response.ok) {
+    //     console.log('Success');
+    //   } else {
+    //       alert(response.statusText);
+      //}
     }
   }
 
