@@ -30,15 +30,22 @@ async function loginFormHandler(event) {
     const password = document.querySelector('#password').value.trim();
   
     if (username && email && password) {
-      await fetch('/api/user/email', {
+     const response = await fetch('/api/user', {
         method: 'post',
         body: JSON.stringify({
-          email,
-          subject: "Welcome to Wantings",
-          text: "Hi " + username + " thank you for creating a profile"
+            username,
+            email,
+            password
+          //subject: "Welcome to Wantings",
+          //text: "Hi " + username + " thank you for creating a profile"
         }),
         headers: { 'Content-Type': 'application/json' }
-      }).then((response) => {console.log(response)})
+      });
+      if (response.ok) {
+        console.log('Success');
+      } else {
+          alert(response.statusText);
+      }
     }
   }
 

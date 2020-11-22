@@ -49,7 +49,7 @@ User.init(
           len: [4]
         }
       },
-      first_name: {
+      /* first_name: {
           type: DataTypes.STRING,
           allowNull: false,
       },
@@ -62,9 +62,9 @@ User.init(
         allowNull: false,
     },
     zip: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
-    }
+    } */
     },
   {
     hooks: {
