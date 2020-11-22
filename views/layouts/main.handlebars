@@ -10,19 +10,21 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Wantings</a>
-      </h1>
-      <nav>
-        <a href="/login">Log In / Register</a>
-        <a href="/cart">My Cart</a>
-        <a href="/contact">Contact Us</a>
-      </nav>
-    </header>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Wantings</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="nav-item nav-link" href="/login">Login / Sign Up</a>
+        <a class="nav-item nav-link" href="/cart">My Cart</a>
+        <a class="nav-item nav-link" href="#">Contact Us</a>
+      </div>
+    </nav>
+  </header>
     <main>
-      {{{ body }}}
+        {{{ body }}}
     </main>
     <footer>
       Thanks for visiting!
