@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection');
 const { Item } = require('../models');
 
-const itemData = [{
-     
+const itemData = [
+{  
   "itemType": "Dresser with Mirror",
   "price": "299",
   "name": "Exquisite 1900's Serpentine Tiger Oak Dresser with Mirror",
