@@ -39,21 +39,18 @@ router.get('/:id', (req, res) => {
       });
   });
 
-// POST /api/users
-router.post('/', (req, res) => {
+// TRYING TO MERGE THIS ROUTE
+  router.post('/', (req, res) => {
     // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-    [ User.create({
+    User.create({
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
-      /*first_name: req.body.first_name,
+      /* first_name: req.body.first_name,
       last_name: req.body.last_name,
       address: req.body.address,
-      zip: req.body.zip */
-    }),
-    text.replace('#username', req.body.username),
-    sendMail(email, subject, text)
-]
+      zip: req.body.zip  */
+    })
 
     
       .then(dbUserData => res.json(dbUserData))
@@ -63,7 +60,8 @@ router.post('/', (req, res) => {
       });
   });
 
-  router.post('/', (req, res) => {
+  // WITH THIS ROUTE
+   router.post('/', (req, res) => {
     const { email, subject, text } = req.body;
     console.log('Data: ', req.body);
     text.replace('#username', req.body.username);
@@ -74,7 +72,7 @@ router.post('/', (req, res) => {
             res.json({ message: 'Email Sent!' });
         }
     });
-});
+}); 
 
   router.post('/login', (req, res) => {
     // expects {email: 'lernantino@gmail.com', password: 'password1234'}
