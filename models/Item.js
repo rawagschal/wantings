@@ -2,6 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 // Require the connection to the database (connection.js)
 const sequelize = require('../config/connection');
 // console.log(sequelize);
+
 class Item extends Model{}
 
 Item.init(

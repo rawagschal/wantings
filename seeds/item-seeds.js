@@ -36,7 +36,7 @@ const itemData = [
   "name": "Classy Flip Top Bar on Wheels",
   "era": "Victorian",
   "dimensions": "Bar: H:34in W:21in x L:32in;  Extended: L:56", 
-  "photoUrl": "https://kimmulliganphoto.smugmug.com/Vintage-Wantings/n-R8qvCD/i-p3BjcNz"
+  "photoUrl": "../public/Images/barOnWheels.jpg"
 
 },
 {
@@ -46,7 +46,7 @@ const itemData = [
   "name": "Stunning Century Isabel Bombe Dresser",
   "era": "Late 20th Century",
   "dimensions": "H:36in W:23in x L:49in", 
-  "photoUrl": "https://kimmulliganphoto.smugmug.com/Vintage-Wantings/n-R8qvCD/i-4jHwN9w"
+  "photoUrl": "../public/Images/bombeDresser.jpg"
 
 },
  
