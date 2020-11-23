@@ -59,6 +59,9 @@ main {
   flex-direction: row ;
 }
 
+.card {
+  color: #213D40;
+}
 
 /*
 #featured-items-wrapper {

@@ -1,15 +1,25 @@
 <div class="row section-wrapper" id="all-items-wrapper">
     <h3>All Items</h3>
     <div class="row gallery" id="all-items-gallery">
-        <div class="col-sm">
-            Item #1
-        </div>
-        <div class="col-sm">
-            Item #2
-        </div>
-        <div class="col-sm">
-            Item #3
-        </div>
+        {{#each items}}
+            <div class="col-sm">
+                <div class="card">
+                    <img class="card-img-top" src="{{photoUrl}}" alt="Card Image Cap">
+                    <div class="card-body">
+                        <h4 class="card-title">{{name}}</h4>
+                        <p class="card-text">Item Description</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{dimensions}}</li>
+                        <li class="list-group-item">{{era}}</li>
+                        <li class="list-group-item">{{price}}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href=" " class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
     </div>
 
 </div>
