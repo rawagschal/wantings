@@ -1,5 +1,4 @@
 const router = require('express').Router();
-// const mailGun = require('./mailGun');
 const user = require('./user-route');
 const item = require('./item-route')
 

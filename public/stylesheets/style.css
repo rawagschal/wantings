@@ -1,3 +1,74 @@
-* {
+:root {
+  /*color palette*/
+  --burnt-orange: #A64833;
+  --peach: #F2B279;
+  --tan: #F2C8A2;
+  --olive: #8A8C54;
+  --forest: #213D40;
+}
+
+* , ::after, ::before {
   box-sizing: border-box;
 }
+
+body {
+  background-color: var(--tan);
+  font-size: 14px;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--peach);
+}
+
+.navbar-light .navbar-brand {
+  color: white;
+}
+
+header {
+  background-color: var(--olive);
+}
+
+
+main {
+  background-color: var(--peach);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 2em;
+  margin: 3em;
+}
+
+.row {
+  margin: 1em;
+  flex-direction: column;
+  text-align: center;
+}
+
+.section-wrapper {
+  background-color: var(--burnt-orange);
+  color: white;
+}
+
+.gallery{ 
+  flex-direction: row ;
+}
+
+.card {
+  color: #213D40;
+}
+
+/*
+#featured-items-wrapper {
+  /* make heading above gallery 
+  flex-direction: column;
+  text-align: center;
+}
+
+
+

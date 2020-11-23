@@ -48,24 +48,24 @@ User.init(
           // this means the password must be at least four characters long
           len: [4]
         }
-      },
-      /* first_name: {
+        },
+        first_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        last_name: {
           type: DataTypes.STRING,
           allowNull: false,
+        },
+        address: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        zip: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        }
       },
-      last_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    address: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    zip: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    } */
-    },
   {
     hooks: {
         // set up beforeCreate lifecycle "hook" functionality
