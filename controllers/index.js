@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //api routes
 const router = require('express').Router();
 
@@ -19,3 +20,11 @@ router.use((req, res) => {
     res.status(404).end();
   });
 module.exports = router;
+=======
+
+// const router = require(‘express’).Router();
+// const apiRoutes = require(‘./api’);
+// router.use(‘/api’, apiRoutes);
+// module.exports = router; 
+
+>>>>>>> 93c3457ae0ee56e46cb82510a17c8879f943e030

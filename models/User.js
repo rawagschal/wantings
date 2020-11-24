@@ -17,6 +17,13 @@ const User = sequelize.define('user', {
     type:DataTypes.STRING,
     allowNull:false,
   },
+<<<<<<< HEAD
+=======
+  lastName:{
+    type:DataTypes.STRING,
+    allowNull:false,
+  },
+>>>>>>> 93c3457ae0ee56e46cb82510a17c8879f943e030
   username:{
     type:DataTypes.STRING,
     allowNull:false,
