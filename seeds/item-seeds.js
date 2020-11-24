@@ -49,7 +49,37 @@ const itemData = [
   "photoUrl": "https://photos.smugmug.com/Vintage-Wantings/n-R8qvCD/i-4jHwN9w/0/25d48bb0/X2/i-4jHwN9w-X2.jpg"
 
 },
- 
+{
+     
+  "itemType": "Table",
+  "price": "229",
+  "name": "Art Nouveau Style Occasional Table",
+  "era": "Art Nouveau Style, Construction Unknown",
+  "dimensions": "H:28in W:31in x L:31in", 
+  "photoUrl": "photo.com"
+
+},
+{
+
+  "itemType": "Table",
+  "price": "79",
+  "name": "Unique Wooden Side Table",
+  "era": "Late 20th Century",
+  "dimensions": "H:22in W:14in x L:25in", 
+  "photoUrl": "photo.com"
+
+},
+{
+
+  "itemType": "Chair",
+  "price": "109",
+  "name": "Charming Antique Tiger Wood Rocker",
+  "era": "Victorian",
+  "dimensions": "H:35in W:17in x L:28in, Seat H:15in", 
+  "photoUrl": "photo.com"
+
+},
+
 ]
 const seedItems = () => Item.bulkCreate(itemData);
 
