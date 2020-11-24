@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User } = require('../../models');
-const sendMail = require('./mail');
 
 
 // GET /api/users
@@ -47,37 +46,21 @@ router.post('/', (req, res) => {
         username: req.body.username,
         email: req.body.email,
         password: req.body.password,
-        /* first_name: req.body.first_name,
+        first_name: req.body.first_name,
         last_name: req.body.last_name,
         address: req.body.address,
-        zip: req.body.zip  */
+        zip: req.body.zip  
     })
 
 
         .then(dbUserData => res.json(dbUserData))
-        //.then(data => {
-        //   res.redirect ('/email')
-        // })
-
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
         });
 });
 
-// WITH THIS ROUTE
-router.post('/email', (req, res) => {
-    const { email, subject, text } = req.body;
-    console.log('Data: ', req.body);
-    text.replace('#username', req.body.username);
-    sendMail(email, subject, text, function (err, data) {
-        if (err) {
-            res.status(500).json({ message: "Internal Error " });
-        } else {
-            res.json({ message: 'Email Sent!' });
-        }
-    });
-});
+
 
 router.post('/login', (req, res) => {
     // expects {email: 'lernantino@gmail.com', password: 'password1234'}

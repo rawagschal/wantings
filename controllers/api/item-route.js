@@ -64,7 +64,7 @@ router.put('/', (req, res) => {
 });  
 
 
-router.delete('/', (req, res) => {
+router.delete('/:id', (req, res) => {
   Item.destroy({
     where: {  
     id: req.params.id,
