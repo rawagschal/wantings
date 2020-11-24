@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const stripe = require('stripe')('sk_test_51HqssXBJygQBRfdhB3znAyi9xE1pmEW4wHOmLfvYGNhpEG0RT0VdGtVO8VMGwYmtPzaM4aohKPD0qZs0vt9OhdKc004I63yuJt');
 
-router.post('/create-checkout-session', async (req, res) => {
+router.post('/', async (req, res) => {
     const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
         line_items: [
@@ -27,4 +27,3 @@ router.post('/create-checkout-session', async (req, res) => {
 
 module.exports = router;
 
-// router.listen(3001, () => console.log(`listening on port ${4242}!`));
