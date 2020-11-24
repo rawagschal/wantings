@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const homeRoute = require('./home-route');
 const apiRoutes = require('./api');
+const checkoutRoute = require('./checkout-route');
 //const loginRoute = require('./login-route');
 //const contactRoute = require('./contact-route');
 
@@ -10,7 +11,7 @@ router.use('/', homeRoute);
 //router.use('/login', loginRoute);
 //router.use('/contact', contactRoute);
 
-
+router.use('/', checkoutRoute);
 
 router.use((req, res) => {
     res.status(404).end();
@@ -20,4 +21,4 @@ router.use((req, res) => {
 module.exports = router;
   
 
-module.exports = router;
+
