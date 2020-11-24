@@ -53,6 +53,9 @@ main {
 .section-wrapper {
   background-color: var(--burnt-orange);
   color: white;
+  /* width: 80%; */
+  /* float: left;
+  text-align: center; */
 }
 
 .gallery{ 
@@ -62,6 +65,14 @@ main {
 .card {
   color: #213D40;
 }
+
+ /* .login-email {
+  display: inline;
+  width: 70%;
+  text-align: right;
+}  */
+
+ 
 
 /*
 #featured-items-wrapper {
