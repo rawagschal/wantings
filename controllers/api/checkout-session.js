@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
             },
         ],
         mode: 'payment',
-        success_url: 'http://localhost:3001/order/success?session_id={CHECKOUT_SESSION_ID}',
+        success_url: 'http://localhost:3001/success',
         cancel_url: 'http://localhost:3001/cancel',
     });
 
