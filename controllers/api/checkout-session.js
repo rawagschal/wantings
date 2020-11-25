@@ -1,8 +1,12 @@
+const Item = require('../../models/Item.js')
+
 const router = require('express').Router();
 
 const stripe = require('stripe')('sk_test_51HqssXBJygQBRfdhB3znAyi9xE1pmEW4wHOmLfvYGNhpEG0RT0VdGtVO8VMGwYmtPzaM4aohKPD0qZs0vt9OhdKc004I63yuJt');
 
-router.post('/', async (req, res) => {
+router.post('/:id', async (req, res) => {
+    const itemId = req.params.id
+    const response = await Item.findByPk(itemId)
     const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
         line_items: [
@@ -10,11 +14,14 @@ router.post('/', async (req, res) => {
                 price_data: {
                     currency: 'usd',
                     product_data: {
-                        name: 'Sample Item Name',
+                        name: response.name,
+                        description: response.description,
+                        images: [response.photoUrl],
                     },
-                    unit_amount: 1234,
+                    unit_amount: response.price,
                 },
                 quantity: 1,
+                
             },
         ],
         mode: 'payment',
