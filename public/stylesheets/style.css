@@ -26,6 +26,10 @@ a:hover {
   color: var(--peach);
 }
 
+h3 {
+  margin-top: 5%;
+}
+
 .navbar-light .navbar-brand {
   color: white;
 }
@@ -52,15 +56,21 @@ main {
 
 .section-wrapper {
   background-color: var(--burnt-orange);
+  align-items: center;
   color: white;
 }
 
 .gallery{ 
   flex-direction: row ;
+  flex-wrap: wrap;
 }
 
 .card {
   color: #213D40;
+}
+
+.about-card {
+  margin: 5%;
 }
 
 /*
