@@ -27,6 +27,10 @@ Item.init(
     type:DataTypes.STRING,
     allowNull:false,
   },
+  description: {
+    type:DataTypes.STRING,
+    allowNull:false,
+  },
   dimensions: {
     type:DataTypes.STRING,
     allowNull:false,

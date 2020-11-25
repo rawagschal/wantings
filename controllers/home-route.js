@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
             'id',
             'price',
             'name',
+            'description',
             'itemType',
             'era',
             'dimensions',
