@@ -16,7 +16,7 @@ Item.init(
     allowNull:false,
   },
   price: {
-    type:DataTypes.STRING,
+    type:DataTypes.DOUBLE,
     allowNull:false,
   },
   name: {
