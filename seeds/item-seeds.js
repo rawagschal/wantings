@@ -5,7 +5,7 @@ const { Item } = require('../models');
 const itemData = [
 {  
   "itemType": "Dresser with Mirror",
-  "price": "299",
+  "price": "29900",
   "name": "Exquisite 1900's Serpentine Tiger Oak Dresser with Mirror",
   "description": "A darling dresser and the perfect solution for someone with big style and a small space! This Victorian chest of drawers features quarter-sawn oak construction in serpentine form with floral embellishments on the mirror frame. 💐 And it's on wheels!",
   "era": "Victorian",
@@ -14,8 +14,8 @@ const itemData = [
 
 },
 {
- "itemType": "Chair ",
-  "price": "199",
+ "itemType": "Chair",
+  "price": "19900",
   "name": "Strong Brown Chair",
   "description": "This solid construction will last for years to come. 👷A mid century beauty that has some wear, but a lot of life left in it. 💃",
   "era": "Mid-Century",
@@ -25,7 +25,7 @@ const itemData = [
 {
      
   "itemType": "Buffet Table with Hutch",
-  "price": "799",
+  "price": "79900",
   "name": "Divine Antique Jacobean Oak Buffet Table with Hutch",
   "description": "This stunning Jacobean piece with traditional barley twists and brass pulls will add charm and sophistication to your home! 👑 Perfect for entertaining and displaying all your cool glassware!",
   "era": "Victorian",
@@ -36,7 +36,7 @@ const itemData = [
 {
      
   "itemType": "Bar",
-  "price": "389",
+  "price": "38900",
   "name": "Classy Flip Top Bar on Wheels",
   "description": "Party time! This classic Ethan Allen bar is perfect for small spaces, complete with silverware drawers, ample cabinet space, and wheels for ease of use. 🍸 Light scratches and a watermark on top, but overall in great condition!",
   "era": "Victorian",
@@ -47,7 +47,7 @@ const itemData = [
 {
      
   "itemType": "Dresser",
-  "price": "799",
+  "price": "79900",
   "name": "Stunning Century Isabel Bombe Dresser",
   "description": "This Century dresser is the bombe! (I was legally required by the state of CA to make that joke) Beautiful heavy wood and fine craftsmanship make it a perfect heirloom piece. In fantastic condition with only very light scratches on the surface.",
   "era": "Late 20th Century",
@@ -58,7 +58,7 @@ const itemData = [
 {
      
   "itemType": "Table",
-  "price": "229",
+  "price": "22900",
   "name": "Art Nouveau Style Occasional Table",
   "description": "This stunning table has dynamic flowing lines typical of the art nouveau style. I truly love this piece! There has been a small repair made as shown. It does not take away from how lovely it is.",
   "era": "Art Nouveau Style, Construction Unknown",
@@ -69,25 +69,14 @@ const itemData = [
 {
 
   "itemType": "Table",
-  "price": "79",
+  "price": "7900",
   "name": "Unique Wooden Side Table",
   "description": "This 3-tiered vintage side table makes a big impact with its intricate design and quality wood construction. It’s perfect for resting your Brandy Alexander (with a coaster of course) or as an amazing multi-level plant stand.",
   "era": "Late 20th Century",
   "dimensions": "H:22in W:14in x L:25in", 
   "photoUrl": "https://tinyurl.com/y5frdqgz"
 
-},
-{
-
-  "itemType": "Chair",
-  "price": "109",
-  "name": "Charming Antique Tiger Wood Rocker",
-  "description": "This armless sewing/nursing rocking chair was built circa 1900 and is in stunning condition. 💎 The seat caning is perfect and the wood is gorgeous. 🦄 If you are looking for a petite classic rocker, you have found it!",
-  "era": "Victorian",
-  "dimensions": "H:35in W:17in x L:28in, Seat H:15in", 
-  "photoUrl": "https://tinyurl.com/y2wo8t2n"
-
-},
+}
 
 ]
 const seedItems = () => Item.bulkCreate(itemData);
