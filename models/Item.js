@@ -16,7 +16,7 @@ Item.init(
     allowNull:false,
   },
   price: {
-    type:DataTypes.DOUBLE,
+    type:DataTypes.DECIMAL,
     allowNull:false,
   },
   name: {

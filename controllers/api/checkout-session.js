@@ -18,7 +18,7 @@ router.post('/:id', async (req, res) => {
                         description: response.description,
                         images: [response.photoUrl],
                     },
-                    unit_amount: response.price,
+                    unit_amount_decimal: response.price,
                 },
                 quantity: 1,
                 
