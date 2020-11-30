@@ -4,18 +4,20 @@
         {{#each items}}
             <div class="col-sm">
                 <div class="card">
-                    <img class="card-img-top" src="{{photoUrl}}" alt="Card Image Cap">
+                   <label for="img">
+                    <img class="card-img-top" src="{{photoUrl}}" alt="Card Image Cap"></label>
                     <div class="card-body">
-                        <h4 class="card-title">{{name}}</h4>
+                        <label for="item-name">
+                        <h4 class="card-title">{{name}}</h4></label>
                         <p class="card-text">Item Description</p>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">{{dimensions}}</li>
                         <li class="list-group-item">{{era}}</li>
-                        <li class="list-group-item">{{price}}</li>
+                       <label for="price"> <li class="list-group-item">{{price}}</li></label>
                     </ul>
                     <div class="card-body">
-                         <button id="checkout-button">Buy Now</button>
+                         <button type="submit" id="delete-button checkout-button">Buy Now</button>
                     </div>
                 </div>
             </div>

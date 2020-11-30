@@ -5,6 +5,7 @@ const apiRoutes = require('./api');
 //const contactRoute = require('./contact-route');
 const successRoute = require('./success-route');
 const cancelRoute = require('./cancel-route');
+const profile = require('./profile-route')
 
 router.use('/api', apiRoutes);
 
@@ -13,6 +14,8 @@ router.use('/success', successRoute);
 router.use('/cancel', cancelRoute);
 // router.use('/login', loginRoute);
 //router.use('/contact', contactRoute);
+router.use('/profile', profile);
+
 
 
 
