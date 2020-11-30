@@ -25,8 +25,8 @@ router.post('/:id', async (req, res) => {
             },
         ],
         mode: 'payment',
-        success_url: 'http://localhost:3001/success',
-        cancel_url: 'http://localhost:3001/cancel',
+        success_url: 'https://warm-crag-68291.herokuapp.com/success',
+        cancel_url: 'https://warm-crag-68291.herokuapp.com/cancel',
     });
 
     res.json({ id: session.id });
